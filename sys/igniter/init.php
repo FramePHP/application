@@ -1,6 +1,7 @@
 <?php
 
 use FramePHP\App\Application;
+use FramePHP\Http\Request;
 
 //Error Reporting
 
@@ -15,7 +16,7 @@ use FramePHP\App\Application;
 //Process all these
 $App = new Application();
 
-$App->collectRequest();
+$App->collectRequest( Request::createFromData() );
 
 $App->processRequest();
 

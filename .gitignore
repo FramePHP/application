@@ -1,4 +1,9 @@
 
+.phpintel/
+
+!app/
+app/*
+
 composer.lock
 
 /vendor/*

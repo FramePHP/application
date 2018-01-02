@@ -19,7 +19,9 @@
     },
     "autoload": {
         "psr-4": {
-            "FramePHP\\": "vendor/frame-php"
+            "App\\": "app/",
+            "FramePHP\\": "vendor/frame-php/framework/src/",
+            "FramePHP\\": "vendor/frame-php/framework/src/"
         }
     },
     "scripts": {

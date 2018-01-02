@@ -23,7 +23,7 @@ $BP = require realpath(__DIR__.'/../blueprint.php');
  * structured your application. All the folders and such are store in here. 
  * -------------------------------------------------------------------------------
 */
-$APP = require_once realpath($BP['sys'].'/igniter/init.php');
+$APP = require_once realpath($BP['ignite'].'/init.php');
 
 /**
  *--------------------------------------------------------------------------------

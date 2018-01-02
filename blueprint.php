@@ -1,7 +1,7 @@
 <?php
 	
 return [
-	'sys'  => realpath(__DIR__.'/sys'),
+	'ignite'  => realpath(__DIR__.'/sys/igniter'),
 	'app'  => realpath(__DIR__.'/app'),
 	'data' => realpath(__DIR__.'/data')
 ];
