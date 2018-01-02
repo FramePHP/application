@@ -8,8 +8,7 @@
             "name": "Hilkiah Makemo",
             "email": "hilkiah.makemo@skywest.com"
         }
-    ],
-    "minimum-stability": "dev",
+    ],    
     "require": {
         "frame-php/module": "dev-master"
     },
@@ -18,8 +17,14 @@
             "./": ["frame-php/module"]
         }
     },
+    "autoload": {
+        "psr-4": {
+            "FramePHP\\": "vendor/frame-php"
+        }
+    },
     "scripts": {
         "post-install-cmd": "Installer::postInstall",
         "post-update-dump": "Installer::postUpdate"
-    }
+    },
+    "minimum-stability": "dev"
 }
