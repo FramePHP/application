@@ -17,5 +17,9 @@
         "installer-paths": {
             "./": ["frame-php/module"]
         }
+    },
+    "scripts": {
+        "post-install-cmd": "Installer::postInstall",
+        "post-update-dump": "Installer::postUpdate"
     }
 }
