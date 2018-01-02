@@ -1,7 +1,6 @@
 <?php
 
 use FramePHP\App\Application;
-use FramePHP\Http\Request;
 
 //Error Reporting
 
@@ -14,12 +13,8 @@ use FramePHP\Http\Request;
 
 
 //Process all these
-$App = new Application();
+$App = Application::Instance();
 
-$App->collectRequest( Request::createFromData() );
+$App->getRequest()->setResponse();
 
-$App->processRequest();
-
-$App->returnResponse();
-
-return $App;
+return $App->run( microtime(true) );
