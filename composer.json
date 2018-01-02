@@ -2,6 +2,7 @@
     "name": "frame-php/application",
     "type": "project",
     "license": "MIT",
+    "description": "Main FramePHP application and all dependencies",
     "authors": [
         {
             "name": "Hilkiah Makemo",
