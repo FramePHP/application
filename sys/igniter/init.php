@@ -14,7 +14,7 @@ $App = FramePHP\App\Application::Instance();
  * Intercept the request from user
  ******************************************************** 
 */
-$App->getRequest(function($request){
+$App->setRequest(function($request){
 	dump($request);
 });
 
@@ -23,11 +23,14 @@ $App->getRequest(function($request){
  * Collect registered routes first
  ******************************************************** 
 */
-$App->getRouting(function(){
-
-    if(($sql_routes = app_path('http/routes.sql'))) return $sql_routes;
-    if(($yml_routes = app_path('http/routes.yml'))) return $yml_routes;
-    if(($arr_routes = app_path('http/routes.php'))) return $arr_routes;
+$App->setRouting(function(){
+    
+    //$route_ext = ['.sql', '.json', '.php', 'yml'];
+    foreach (['sql', 'json', 'php', 'yml', 'xml'] as $ext) {
+    	$routes = app_path("site/httpobject/routes.$ext");
+    	if($routes && $ext == 'yml') return $routes;
+    	if($routes && $ext == 'php') return require $routes;
+    }
 
 });
 
