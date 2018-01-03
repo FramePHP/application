@@ -24,7 +24,8 @@ require_once realpath(__DIR__.'/../vendor/autoload.php');
  * structured your application. All the folders and such are store in here. 
  * -------------------------------------------------------------------------------
 */
-$BP = require realpath(__DIR__.'/../blueprint.php'); 
+global $_BP;
+$_BP = require realpath(__DIR__.'/../blueprint.php'); 
 
 /**
  *--------------------------------------------------------------------------------
@@ -34,7 +35,7 @@ $BP = require realpath(__DIR__.'/../blueprint.php');
  * structured your application. All the folders and such are store in here. 
  * -------------------------------------------------------------------------------
 */
-$APP = require_once realpath($BP['ignite'].'/init.php');
+$APP = require_once realpath($_BP['ignite'].'/init.php');
 
 /**
  *--------------------------------------------------------------------------------

@@ -25,7 +25,8 @@
         "psr-4": {
             "App\\": "app/",
             "FramePHP\\": "vendor/frame-php/framework/src/"
-        }
+        },
+        "files": [ "sys/autoload.php" ]
     },
     "scripts": {
         "post-install-cmd": "Installer::postInstall",

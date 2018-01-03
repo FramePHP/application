@@ -1,20 +1,48 @@
 <?php
 
-use FramePHP\App\Application;
+// use FramePHP\App\Application;
 
-//Error Reporting
+/**
+ ********************************************************
+ * 
+ ******************************************************** 
+*/
+$App = FramePHP\App\Application::Instance();
 
+/**
+ ********************************************************
+ * Intercept the request from user
+ ******************************************************** 
+*/
+$App->getRequest(function(){
+	
+});
 
+/**
+ ********************************************************
+ * Collect registered routes first
+ ******************************************************** 
+*/
+$App->getRouting(function(){
 
+    if(($sql_routes = app_path('http/routes.sql'))) return $sql_routes;
+    if(($yml_routes = app_path('http/routes.yml'))) return $yml_routes;
+    if(($arr_routes = app_path('http/routes.php'))) return $arr_routes;
+    
+});
 
-//Loading Configs
+/**
+ ********************************************************
+ * 
+ ******************************************************** 
+*/
+$App->setResponse(function(){
 
+});
 
-
-
-//Process all these
-$App = Application::Instance();
-
-$App->getRequest()->setResponse();
-
-return $App->run( microtime(true) );
+/**
+ ********************************************************
+ * 
+ ******************************************************** 
+*/
+return $App;

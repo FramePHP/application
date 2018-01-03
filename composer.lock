@@ -7,31 +7,33 @@
     "content-hash": "41d35a09454283b7f0d053528030cfd8",
     "packages": [
         {
-            "name": "altorouter/altorouter",
-            "version": "v1.2.0",
+            "name": "dannyvankooten/php-router",
+            "version": "1.2.0-alpha",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dannyvankooten/AltoRouter.git",
-                "reference": "39c50092470128c12284d332bb57f306bb5b58e4"
+                "url": "https://github.com/dannyvankooten/PHP-Router.git",
+                "reference": "5c5831e0bad321a2db184486e3589c2a2813ef83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dannyvankooten/AltoRouter/zipball/39c50092470128c12284d332bb57f306bb5b58e4",
-                "reference": "39c50092470128c12284d332bb57f306bb5b58e4",
+                "url": "https://api.github.com/repos/dannyvankooten/PHP-Router/zipball/5c5831e0bad321a2db184486e3589c2a2813ef83",
+                "reference": "5c5831e0bad321a2db184486e3589c2a2813ef83",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "fig/http-message-util": "^1.1",
+                "php": "^5.3.0|^7.0"
             },
             "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
-                "phpunit/phpunit": "4.5.*"
+                "malukenho/docheader": "^0.1.5",
+                "phpunit/phpunit": "4.8.*",
+                "squizlabs/php_codesniffer": "2.*"
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "AltoRouter.php"
-                ]
+                "psr-4": {
+                    "PHPRouter\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -44,22 +46,68 @@
                     "homepage": "http://dannyvankooten.com/"
                 },
                 {
-                    "name": "Koen Punt",
-                    "homepage": "https://github.com/koenpunt"
-                },
-                {
-                    "name": "niahoo",
-                    "homepage": "https://github.com/niahoo"
+                    "name": "Jefersson Nathan",
+                    "email": "malukenho@phpse.net"
                 }
             ],
-            "description": "A lightning fast router for PHP",
-            "homepage": "https://github.com/dannyvankooten/AltoRouter",
+            "description": "Simple PHP Router, supports REST and reverse routing.",
+            "homepage": "https://github.com/dannyvankooten/PHP-Router",
             "keywords": [
-                "lightweight",
+                "rest",
                 "router",
                 "routing"
             ],
-            "time": "2015-11-30T00:47:43+00:00"
+            "time": "2017-03-09T21:53:41+00:00"
+        },
+        {
+            "name": "fig/http-message-util",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message-util.git",
+                "reference": "20b2c280cb6914b7b83089720df44e490f4b42f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message-util/zipball/20b2c280cb6914b7b83089720df44e490f4b42f0",
+                "reference": "20b2c280cb6914b7b83089720df44e490f4b42f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3 || ^7.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fig\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Utility classes and constants for use with PSR-7 (psr/http-message)",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2017-02-09T16:10:21+00:00"
         },
         {
             "name": "frame-php/framework",
@@ -67,16 +115,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FramePHP/framework.git",
-                "reference": "f128a31b058ee016c0158eef0491b3ead7641a1d"
+                "reference": "c726194d3bcd2596bc17a14f3f77f06bfd90a628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FramePHP/framework/zipball/f128a31b058ee016c0158eef0491b3ead7641a1d",
-                "reference": "f128a31b058ee016c0158eef0491b3ead7641a1d",
+                "url": "https://api.github.com/repos/FramePHP/framework/zipball/c726194d3bcd2596bc17a14f3f77f06bfd90a628",
+                "reference": "c726194d3bcd2596bc17a14f3f77f06bfd90a628",
                 "shasum": ""
             },
             "require": {
-                "altorouter/altorouter": "^1.1",
+                "dannyvankooten/php-router": "^1.2",
                 "propel/propel": "^2.0",
                 "symfony/http-foundation": "^4.0"
             },
@@ -97,7 +145,7 @@
                 }
             ],
             "description": "Main FramePHP framework and all dependencies",
-            "time": "2018-01-02T21:21:24+00:00"
+            "time": "2018-01-02T21:59:17+00:00"
         },
         {
             "name": "frame-php/module",
@@ -193,6 +241,56 @@
                 "persistence"
             ],
             "time": "2017-10-02T12:20:33+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
