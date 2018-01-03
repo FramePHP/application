@@ -3,6 +3,7 @@
 
 !app/
 app/*
+app/data/*
 
 composer.lock
 
