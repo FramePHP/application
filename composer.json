@@ -14,7 +14,7 @@
         "fzaninotto/faker": "^1.7"
     },   
     "require": {
-        "frame-php/module": "dev-master"
+        "frame-php/module": "^1.0"
     },
     "extra":{
         "installer-paths": {
