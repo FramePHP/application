@@ -14,8 +14,7 @@
         "fzaninotto/faker": "^1.7"
     },
     "require": {
-        "frame-php/module-app": "dev-master",
-        "frame-php/module-sys": "dev-master",
+        "frame-php/module-app": "dev-master"
     },
     "extra":{
         "installer-paths": {
@@ -30,7 +29,10 @@
         "files": [ "sys/autoload.php" ]
     },
     "scripts": {
-        "post-install-cmd": "Installer::postInstall",
+        "post-install-cmd": [
+            "mv vendor/frame-php/module-sys ./sys",
+            "Installer::postInstall"
+        ],
         "post-update-dump": "Installer::postUpdate"
     },
     "minimum-stability": "dev"
