@@ -8,17 +8,17 @@
             "name": "Hilkiah Makemo",
             "email": "hilkiah.makemo@skywest.com"
         }
-    ], 
+    ],
     "require-dev": {
         "maximebf/debugbar": "^1.15",
         "fzaninotto/faker": "^1.7"
-    },   
+    },
     "require": {
         "frame-php/module": "^1.0"
     },
     "extra":{
         "installer-paths": {
-            "./": ["frame-php/module"]
+            "./{$name}": ["frame-php/module-app", "frame-php/module-sys"]
         }
     },
     "autoload": {
