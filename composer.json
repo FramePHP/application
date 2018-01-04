@@ -30,11 +30,12 @@
         "files": [ "sys/autoload.php" ]
     },
     "scripts": {
-        "post-install-cmd": [
-            "mv vendor/frame-php/module-sys ./sys",
-            "Installer::postInstall"
+        "postUpdateCmd": [
+            "@php \"is_dir('sys')\" || cp -r ./vendor/frame-php/module-sys ./sys/",
+            "@php \"is_dir('app')\" || cp -r ./vendor/frame-php/module-app ./app/"
         ],
-        "post-update-dump": "Installer::postUpdate"
+        "post-install-cmd": ["@postUpdateCmd"],
+        "post-update-cmd": ["@postUpdateCmd"]
     },
     "minimum-stability": "dev"
 }
