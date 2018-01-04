@@ -1,9 +1,13 @@
 
 .phpintel/
 
+# App folder
 !app/
-app/*
+!app/*
 app/data/*
+
+#Public folder
+!public
 
 composer.lock
 
