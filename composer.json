@@ -14,6 +14,7 @@
         "fzaninotto/faker": "^1.7"
     },
     "require": {
+        "frame-php/module-sys": "dev-master",
         "frame-php/module-app": "dev-master"
     },
     "extra":{
