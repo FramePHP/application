@@ -26,8 +26,8 @@
     },
     "scripts": {
         "postUpdateCmd": [
-            "@php \"is_dir('sys')\" || cp -r ./vendor/frame-php/module-sys ./sys/",
-            "@php \"is_dir('app')\" || cp -r ./vendor/frame-php/module-app ./app/"
+            "@php \"is_dir('sys')\" || cp -r ./vendor/frame-php/module-sys/ ./sys/",
+            "@php \"is_dir('app')\" || cp -r ./vendor/frame-php/module-app/ ./app/"
         ],
         "post-install-cmd": ["@postUpdateCmd"],
         "post-update-cmd": ["@postUpdateCmd"]
