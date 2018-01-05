@@ -31,7 +31,7 @@
         ],
         "trashFiles" : [
             "@php -r \"!is_dir(vendor/frame-php/module-sys)\" || mv ./vendor/frame-php/module-sys",
-            "@php -r \"!is_dir(vendor/frame-php/module-app)\" || mv ./vendor/frame-php/module-app"
+            "@php -r \"!is_dir(vendor/frame-php/module-app)\" || mv ./vendor/frame-php/module-app",
             "@php composer update && composer dump-autoload -o"
         ],
         "post-install-cmd": [
