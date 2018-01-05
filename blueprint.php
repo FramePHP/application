@@ -1,7 +1,7 @@
 <?php
-	
+
 return [
-	
+
 	'vendor' => $vendor = realpath(__DIR__.'/vendor'),
 	'data'   => $data   = realpath(__DIR__.'/data'),
 	'app'    => $app    = realpath(__DIR__.'/app'),

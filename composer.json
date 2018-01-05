@@ -26,12 +26,12 @@
     },
     "scripts": {
         "moveFiles": [
-            "@php \"is_dir('sys');\" || cp -r ./vendor/frame-php/module-sys/ ./sys/",
-            "@php \"is_dir('app');\" || cp -r ./vendor/frame-php/module-app/ ./app/"
+            "@php -r \"is_dir('sys');\" || cp -r ./vendor/frame-php/module-sys/ ./sys/",
+            "@php -r \"is_dir('app');\" || cp -r ./vendor/frame-php/module-app/ ./app/"
         ],
         "trashFiles" : [
-            "@php \"!is_dir(vendor/frame-php/module-sys)\" || mv ./vendor/frame-php/module-sys",
-            "@php \"!is_dir(vendor/frame-php/module-app)\" || mv ./vendor/frame-php/module-app"
+            "@php -r \"!is_dir(vendor/frame-php/module-sys)\" || mv ./vendor/frame-php/module-sys",
+            "@php -r \"!is_dir(vendor/frame-php/module-app)\" || mv ./vendor/frame-php/module-app"
             "@php composer update && composer dump-autoload -o"
         ],
         "post-install-cmd": [
