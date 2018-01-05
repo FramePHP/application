@@ -34,7 +34,7 @@
             "@php \"!is_dir(vendor/frame-php/module-app)\" || mv ./vendor/frame-php/module-app"
             "@php composer update && composer dump-autoload -o"
         ],
-        "post-install-cmd": ["@moveFiles", "@trashFiles],
+        "post-install-cmd": ["@moveFiles @trashFiles],
         "post-update-cmd": ["@post-install-cmd"]
     },
     "minimum-stability": "dev"
