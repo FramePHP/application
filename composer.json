@@ -16,8 +16,7 @@
     "require": {
         "frame-php/framework": "dev-master",
         "frame-php/module-sys": "dev-master",
-        "frame-php/module-app": "dev-master",
-        "phroute/phroute": "dev-master"
+        "frame-php/module-app": "dev-master"
     },
     "autoload": {
         "psr-4": {
