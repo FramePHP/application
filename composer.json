@@ -26,8 +26,14 @@
         "files": [ "sys/autoload.php" ]
     },
     "scripts": {
-        "post-update-cmd": [
+        "dltFiles": [
             "@php -r \"require_once 'Command.php'; Command::PostUpdateCMD();\""
+        ],
+        "loadFiles" : [
+            "composer dump-autoload -o"
+        ],
+        "post-update-cmd": [
+            "@dltFiles", "@loadFiles"
         ]
     },
     "minimum-stability": "dev"
