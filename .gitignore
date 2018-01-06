@@ -3,8 +3,8 @@
 
 # App folder
 !app/
-!app/*
 app/data/*
+app/data/*.*
 
 #Public folder
 !public
