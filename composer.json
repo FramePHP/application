@@ -25,20 +25,8 @@
         "files": [ "sys/autoload.php" ]
     },
     "scripts": {
-        "moveFiles": [
-            "@php -r \"is_dir('sys');\" || cp -r ./vendor/frame-php/module-sys/ ./sys/",
-            "@php -r \"is_dir('app');\" || cp -r ./vendor/frame-php/module-app/ ./app/"
-        ],
-        "trashFiles" : [
-            "@php -r \"!is_dir(vendor/frame-php/module-sys)\" || mv ./vendor/frame-php/module-sys",
-            "@php -r \"!is_dir(vendor/frame-php/module-app)\" || mv ./vendor/frame-php/module-app",
-            "@php composer update && composer dump-autoload -o"
-        ],
-        "post-install-cmd": [
-            "@moveFiles @trashFiles"
-        ],
         "post-update-cmd": [
-            "@post-install-cmd"
+            "@php -r \"require_once 'Command.php'; Command::PostUpdateCMD()\"
         ]
     },
     "minimum-stability": "dev"
