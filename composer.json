@@ -27,7 +27,7 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "@php -r \"require_once 'Command.php'; Command::PostUpdateCMD();\"
+            "@php -r \"require_once 'Command.php'; Command::PostUpdateCMD();\""
         ]
     },
     "minimum-stability": "dev"
