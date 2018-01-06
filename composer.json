@@ -26,9 +26,16 @@
         "files": [ "sys/autoload.php" ]
     },
     "scripts": {
+        "post-create-project-cmd": [
+            "@php -r \"require_once 'Command.php'; Command::CheckInstallCMD(true);\"", 
+            "composer update"
+        ],
+        "post-install-cmd": [
+            "@post-create-project-cmd"
+        ],
         "post-update-cmd": [
-            "@php -r \"require_once 'Command.php'; Command::CheckInstallCMD();\"",
-            "composer dump-autoload -o"
+            "@php -r \"require_once 'Command.php'; Command::CheckInstallCMD();\"", 
+            "composer dumpautoload"
         ]
     },
     "minimum-stability": "dev"
