@@ -23,7 +23,10 @@
             "App\\": "app/",
             "FramePHP\\": "vendor/frame-php/framework/src/"
         },
-        "files": [ "sys/autoload.php" ]
+        "files": [ 
+            "sys/autoload.php",
+            "vendor/frame-php/framework/autoload.php"
+        ]
     },
     "scripts": {
         "post-create-project-cmd": [

@@ -5,6 +5,7 @@
  * 
 */
 define('APP_START_TIME', microtime(true));
+define('APP_ROOT', dirname(__DIR__).DIRECTORY_SEPARATOR);
 
 /**
  *--------------------------------------------------------------------------------
@@ -14,7 +15,7 @@ define('APP_START_TIME', microtime(true));
  * structured your application. All the settings and information are stored here. 
  * -------------------------------------------------------------------------------
 */
-$_BP = require_once realpath(__DIR__.'/../blueprint.php'); 
+$_BP = require_once APP_ROOT.'blueprint.php'; 
 
 /**
  *--------------------------------------------------------------------------------
@@ -35,24 +36,6 @@ require_once realpath($_BP['paths']['autoloader']);
  * -------------------------------------------------------------------------------
 */
 $APP = require realpath($_BP['paths']['initiator']);
-/**
- ***********************************************************************
- * Set the application environment
- ***********************************************************************
- * First and foremost, we ned to establish the application's environment, 
- * in order to know how to return the response and how much resources we 
- * need to allocate for it...
-*/
-$APP->app_env = app('env') ?? 'DEV'; // DEV | PROD | TEST
-
-/**
- ***********************************************************************
- * Set the application root path
- ***********************************************************************
- * Next and importantly, we need the application root path to know where
- * all our login and files are stored...
-*/
-$APP->app_root = app('root') ?? realpath(__DIR__.'/../../');
 
 /**
  ***********************************************************************
@@ -62,7 +45,7 @@ $APP->app_root = app('root') ?? realpath(__DIR__.'/../../');
  * free to set up your own properties here, as long as they are not already
  * in the FramePHP list. It can be anything
 */
-// $App->custom_var = function(){ return 'Hello World!'; };
+// $APP->custom_var = return function(){ return 'Hello World!'; };
 
 /**
  *--------------------------------------------------------------------------------
