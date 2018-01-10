@@ -5,6 +5,8 @@
 !app/
 app/data/*
 app/data/*.*
+app/site/*
+app/site/*.*
 
 #Public folder
 !public
