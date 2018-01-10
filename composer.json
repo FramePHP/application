@@ -14,39 +14,24 @@
         "fzaninotto/faker": "^1.7"
     },
     "require": {
-        "frame-php/framework": "dev-master",
-        "frame-php/module-sys": "dev-master",
-        "frame-php/module-app": "dev-master"
+        "frame-php/framework": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/",
             "FramePHP\\": "vendor/frame-php/framework/src/"
         },
-        "files": [ 
+        "files": [
             "sys/autoload.php",
             "vendor/frame-php/framework/autoload.php"
         ]
     },
-    "extras": {
-        "installer-paths" : {
-            "./{$name}": [
-                "frame-php/module-sys",
-                "frame-php/module-app"
-            ]
-        }
-    },
     "scripts": {
         "post-create-project-cmd": [
-            "@php -r \"require_once 'Command.php'; Command::CheckInstallCMD(true);\"", 
-            "composer update"
         ],
         "post-install-cmd": [
-            "@post-create-project-cmd"
         ],
         "post-update-cmd": [
-            "mv module-app app && mv module-sys sys", 
-            "composer dumpautoload"
         ]
     },
     "minimum-stability": "dev"
