@@ -28,6 +28,14 @@
             "vendor/frame-php/framework/autoload.php"
         ]
     },
+    "extras": {
+        "installer-paths" : {
+            "./{$name}: [
+                "frame-php/module-sys",
+                "frame-php/module-app"
+            ]
+        }
+    },
     "scripts": {
         "post-create-project-cmd": [
             "@php -r \"require_once 'Command.php'; Command::CheckInstallCMD(true);\"", 
@@ -37,7 +45,7 @@
             "@post-create-project-cmd"
         ],
         "post-update-cmd": [
-            "@php -r \"require_once 'Command.php'; Command::CheckInstallCMD();\"", 
+            "mv module-app app && mv module-sys sys", 
             "composer dumpautoload"
         ]
     },
