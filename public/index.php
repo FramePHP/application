@@ -25,7 +25,7 @@ $_BP = require_once APP_ROOT.'blueprint.php';
  * feel free to created your own autoloader class in the blueprint
  * -------------------------------------------------------------------------------
 */
-require_once realpath($_BP['paths']['autoloader']);
+require_once realpath($_BP['paths']['autoloader']); //original: vendor/autoload.php
 
 /**
  *--------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ require_once realpath($_BP['paths']['autoloader']);
  * structured your application. All the folders and such are store in here.
  * -------------------------------------------------------------------------------
 */
-$APP = require realpath($_BP['paths']['initiator']);
+$APP = require realpath($_BP['paths']['initiator']); //original: sys/boot/init.php
 
 /**
  ***********************************************************************
