@@ -30,7 +30,7 @@
     },
     "extras": {
         "installer-paths" : {
-            "./{$name}: [
+            "./{$name}": [
                 "frame-php/module-sys",
                 "frame-php/module-app"
             ]
