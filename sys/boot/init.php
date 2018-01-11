@@ -14,11 +14,11 @@ $App = Application::Instance();
 //  ***********************************************************************
 //  * Set the application environment
 //  ***********************************************************************
-//  * First and foremost, we ned to establish the application's environment, 
-//  * in order to know how to return the response and how much resources we 
+//  * First and foremost, we ned to establish the application's environment,
+//  * in order to know how to return the response and how much resources we
 //  * need to allocate for it...
 // */
-$App->app_env = 'DEV'; // DEV | PROD | TEST
+$App->share('app_env', 'DEV'); // DEV | PROD | TEST
 
 // /**
 //  ***********************************************************************
@@ -27,7 +27,7 @@ $App->app_env = 'DEV'; // DEV | PROD | TEST
 //  * Next and importantly, we need the application root path to know where
 //  * all our login and files are stored...
 // */
-$App->app_root = APP_ROOT;
+$App->share('app_root', APP_ROOT);
 
 /**
  ***********************************************************************
