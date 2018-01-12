@@ -3,12 +3,13 @@
 
 # App folder
 !app/
+!app/data/
 app/data/*
-app/data/*.*
+!app/site/
 app/site/*
-app/site/*.*
 
-/sys/
+!sys/
+sys/*
 
 
 #Public folder
