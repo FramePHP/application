@@ -1,23 +1,22 @@
 .git/
 .phpintel/
 
-# App folder
-!app/
+# Application folder
 !app/data/
 app/data/*
 !app/site/
 app/site/*
 
+# System folder
 !sys/
 sys/*
 
-
-#Public folder
-!public
+# Modules folder
+!mods/
+mods/*
 
 composer.lock
 
 #Vendor folder
 !vendor/
 vendor/*
-vendor/*.*
