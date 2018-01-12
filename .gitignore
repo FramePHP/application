@@ -8,6 +8,9 @@ app/data/*.*
 app/site/*
 app/site/*.*
 
+/sys/
+
+
 #Public folder
 !public
 
