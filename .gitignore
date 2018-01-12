@@ -2,21 +2,21 @@
 .phpintel/
 
 # Application folder
-!app/data/
-app/data/*
-!app/site/
-app/site/*
+!/app/data/
+/app/data/*
+!/app/site/
+/app/site/*
 
 # System folder
-!sys/
-sys/*
+!/sys/
+/sys/*
 
 # Modules folder
-!mods/
-mods/*
+!/mods/
+/mods/*
 
 composer.lock
 
 #Vendor folder
-!vendor/
-vendor/*
+!/vendor/
+/vendor/*
