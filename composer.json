@@ -18,7 +18,7 @@
     },
     "autoload": {
         "classmap": [
-            "sys/code"
+            "sys"
         ],
         "psr-4": {
             "App\\": "app/"
