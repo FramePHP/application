@@ -28,10 +28,15 @@
     },
     "scripts": {
         "post-create-project-cmd": [
+            "frame project", 
+            "composer update"
         ],
         "post-install-cmd": [
+            "frame install"
         ],
         "post-update-cmd": [
+            "frame update",
+            "composer dump-autoload"
         ]
     },
     "minimum-stability": "dev"
