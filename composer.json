@@ -18,12 +18,10 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "FramePHP\\": "vendor/frame-php/framework/src/"
+            "App\\": "app/"
         },
         "files": [
-            "sys/autoload.php",
-            "vendor/frame-php/framework/autoload.php"
+            "sys/autoload.php"
         ]
     },
     "scripts": {
